@@ -10,7 +10,7 @@ export default async (mongoose) => {
       name: 'test name1',
       lastname: 'test lastname1',
       birthDate: today,
-      positions: ['Flanker', 'Hooker', 'Prop'],
+      positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
       photo: ''
@@ -19,7 +19,7 @@ export default async (mongoose) => {
       name: 'test name2',
       lastname: 'test lastname2',
       birthDate: today,
-      positions: ['Flanker', 'Hooker', 'Prop'],
+      positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
       photo: ''
@@ -28,7 +28,7 @@ export default async (mongoose) => {
       name: 'test name3',
       lastname: 'test lastname3',
       birthDate: today,
-      positions: ['Flanker', 'Hooker', 'Prop'],
+      positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
       photo: ''
@@ -37,7 +37,7 @@ export default async (mongoose) => {
       name: 'test name4',
       lastname: 'test lastname4',
       birthDate: today,
-      positions: ['Flanker', 'Hooker', 'Prop'],
+      positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
       photo: ''

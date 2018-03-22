@@ -3,7 +3,7 @@ type Player {
   name: String!
   lastname: String!
   birthDate: Date
-  positions: [String!]
+  positions: [Position!]!
   phoneNumber: String
   email: String
   photo: String

@@ -1,1 +1,12 @@
 scalar Date
+
+enum Position {
+  WING
+  CENTRE
+  FLYHALF
+  SCRUMHALF
+  EIGHT
+  FLANKER
+  HOOKER
+  PROP
+}

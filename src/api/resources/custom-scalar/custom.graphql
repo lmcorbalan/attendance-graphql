@@ -24,3 +24,10 @@ enum SessionPlace {
   PARK
   CLUB
 }
+
+enum AttendanceType {
+  YES
+  NO
+  SAF
+  DIF
+}

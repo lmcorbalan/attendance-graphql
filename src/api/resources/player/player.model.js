@@ -1,6 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema } from 'mongoose'
 
-const playerSchema = new mongoose.Schema({
+const attendanceSchema = new Schema({
+  session: {
+    required: true,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'session'
+
+  },
+  type: {
+    type: String,
+    required: true
+  }
+})
+
+const playerSchema = new Schema({
   name: {
     type: String,
     required: [true, "Player's name is required"]
@@ -21,7 +34,10 @@ const playerSchema = new mongoose.Schema({
 
   photo: {
     type: String
-  }
+  },
+
+  attendances: [attendanceSchema]
+
 }, {timestamps: true})
 
 export const Player = mongoose.model('player', playerSchema)

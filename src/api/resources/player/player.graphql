@@ -1,3 +1,8 @@
+type Attendance {
+  session: Session!
+  type: AttendanceType!
+}
+
 type Player {
   id: ID!
   name: String!
@@ -7,6 +12,7 @@ type Player {
   phoneNumber: String
   email: String
   photo: String
+  attendances: [Attendance]
   createdAt: Date
   updatedAt: Date
 }

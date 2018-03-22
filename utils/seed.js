@@ -1,10 +1,12 @@
 import { dropDb } from './helpers'
 import { Player } from '../src/api/resources/player/player.model'
+import { Session } from '../src/api/resources/session/session.model'
 
 const today = new Date
 
 export default async (mongoose) => {
   await dropDb(mongoose)
+
   await Player.insertMany([
     {
       name: 'test name1',
@@ -43,4 +45,23 @@ export default async (mongoose) => {
       photo: ''
     }
   ])
+
+  await Session.insertMany([
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    },
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    },
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    }
+  ])
+
 }

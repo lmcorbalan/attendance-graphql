@@ -1,0 +1,11 @@
+type Session {
+  id: ID!
+  place: SessionPlace!
+  date: Date!
+  type: SessionType!
+}
+
+extend type Query {
+  Session(id: ID!): Session!
+  allSessions: [Session!]
+}

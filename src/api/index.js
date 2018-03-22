@@ -4,6 +4,7 @@ import { graphqlExpress } from 'apollo-server-express'
 
 import { customScalarType, customScalarResolvers } from './resources/custom-scalar'
 import { playerType, playerResolvers } from './resources/player'
+import { sessionType, sessionResolvers } from './resources/session'
 
 const baseSchema = `
   schema {
@@ -15,12 +16,14 @@ export const schema = makeExecutableSchema({
   typeDefs: [
     baseSchema,
     customScalarType,
-    playerType
+    playerType,
+    sessionType
   ],
   resolvers: merge(
     {},
     customScalarResolvers,
-    playerResolvers
+    playerResolvers,
+    sessionResolvers
   )
 })
 

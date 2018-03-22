@@ -10,3 +10,17 @@ enum Position {
   HOOKER
   PROP
 }
+
+enum SessionType {
+  HIGH
+  LOW
+  MIDDLE
+  MATCH
+}
+
+enum SessionPlace {
+  LOCAL
+  VISITOR
+  PARK
+  CLUB
+}

@@ -8,6 +8,10 @@ const allPlayers = (_, __, {user}) => {
   return Player.find({}).exec()
 }
 
+const resolverDate = () => {
+
+}
+
 export const playerResolvers = {
   Query: {
     allPlayers,

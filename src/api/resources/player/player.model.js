@@ -11,6 +11,14 @@ const playerSchema = new mongoose.Schema({
     required: [true, "Player's lastname is required"]
   },
 
+  birthDate: Date,
+
+  positions: [String],
+
+  phoneNumber: String,
+
+  email: String,
+
   photo: {
     type: String
   }

@@ -2,9 +2,13 @@ type Player {
   id: ID!
   name: String!
   lastname: String!
+  birthDate: Date
+  positions: [String!]
+  phoneNumber: String
+  email: String
   photo: String
-  createdAt: String!
-  updatedAt: String!
+  createdAt: Date
+  updatedAt: Date
 }
 
 type Query {

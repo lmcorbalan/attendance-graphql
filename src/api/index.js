@@ -9,6 +9,7 @@ import { sessionType, sessionResolvers } from './resources/session'
 const baseSchema = `
   schema {
     query: Query
+    mutation: Mutation
   }
 `
 

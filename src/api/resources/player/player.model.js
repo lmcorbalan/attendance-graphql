@@ -2,11 +2,10 @@ import mongoose, { Schema } from 'mongoose'
 
 const attendanceSchema = new Schema({
   session: {
+    type: String,
     required: true,
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'session'
-
   },
+
   type: {
     type: String,
     required: true

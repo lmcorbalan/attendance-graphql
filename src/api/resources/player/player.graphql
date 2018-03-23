@@ -1,8 +1,3 @@
-type Attendance {
-  session: Session!
-  type: AttendanceType!
-}
-
 type Player {
   id: ID!
   name: String!
@@ -17,7 +12,29 @@ type Player {
   updatedAt: Date
 }
 
+type Attendance {
+  id: ID!
+  session: Session!
+  type: AttendanceType!
+}
+
+input UpdatedAttendance {
+  id: ID!
+  type: AttendanceType!
+}
+
+input NewAttendance {
+  session: ID!
+  type: AttendanceType!
+}
+
 type Query {
   Player(id: ID!): Player!
   allPlayers: [Player]!
+}
+
+type Mutation {
+  addAttendace(playerId: ID!, input: NewAttendance!): Player!
+  updateAttendace(playerId: ID!, input: UpdatedAttendance!): Player!
+  removeAttendace(playerId: ID!, input: ID!): Player!
 }

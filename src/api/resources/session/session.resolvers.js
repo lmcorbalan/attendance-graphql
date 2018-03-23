@@ -5,7 +5,6 @@ const getSession = (_, {id}, {user}) => {
 }
 
 const allSessions = (_, __, {user}) => {
-  console.log('test')
   return Session.find({}).exec()
 }
 

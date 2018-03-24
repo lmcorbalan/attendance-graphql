@@ -9,3 +9,22 @@ extend type Query {
   Session(id: ID!): Session!
   allSessions: [Session!]
 }
+
+input UpdatedSession {
+  id: ID!
+  place: SessionPlace
+  date: Date
+  type: SessionType
+}
+
+input NewSession {
+  place: SessionPlace!
+  date: Date!
+  type: SessionType!
+}
+
+extend type Mutation {
+  newSession(input: NewSession!): Session!
+  updateSession(input: UpdatedSession!): Session!
+  removeSession(id: ID!): Session!
+}

@@ -44,6 +44,20 @@ export const playerResolvers = {
     removeAttendace
   },
 
+  Player: {
+    attendances(player, args) {
+      let attendances = player.attendances;
+
+      if (args.sessionId) {
+        attendances = attendances.filter(attendance => (
+          attendance.session === args.sessionId
+        ));
+      }
+
+      return attendances;
+    }
+  },
+
   Attendance: {
     async session({session}) {
       return Session.findById(session)

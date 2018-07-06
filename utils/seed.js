@@ -7,6 +7,24 @@ const today = new Date
 export default async (mongoose) => {
   await dropDb(mongoose)
 
+  const sessions = await Session.insertMany([
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    },
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    },
+    {
+      place: 'LOCAL',
+      date: today,
+      type: 'HIGH'
+    }
+  ])
+
   await Player.insertMany([
     {
       name: 'test name1',
@@ -15,7 +33,21 @@ export default async (mongoose) => {
       positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
-      photo: ''
+      photo: '',
+      attendances: [
+        {
+          session: sessions[0]._id,
+          type: 'YES'
+        },
+        {
+          session: sessions[1]._id,
+          type: 'NO'
+        },
+        {
+          session: sessions[2]._id,
+          type: 'DIF'
+        }
+      ]
     },
     {
       name: 'test name2',
@@ -24,7 +56,21 @@ export default async (mongoose) => {
       positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
-      photo: ''
+      photo: '',
+      attendances: [
+        {
+          session: sessions[0]._id,
+          type: 'YES'
+        },
+        {
+          session: sessions[1]._id,
+          type: 'NO'
+        },
+        {
+          session: sessions[2]._id,
+          type: 'DIF'
+        }
+      ]
     },
     {
       name: 'test name3',
@@ -33,7 +79,21 @@ export default async (mongoose) => {
       positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
-      photo: ''
+      photo: '',
+      attendances: [
+        {
+          session: sessions[0]._id,
+          type: 'YES'
+        },
+        {
+          session: sessions[1]._id,
+          type: 'NO'
+        },
+        {
+          session: sessions[2]._id,
+          type: 'DIF'
+        }
+      ]
     },
     {
       name: 'test name4',
@@ -42,26 +102,21 @@ export default async (mongoose) => {
       positions: ["WING", "CENTRE", "FLYHALF", "SCRUMHALF","EIGHT", "FLANKER", "HOOKER", "PROP"],
       phoneNumber: '341-123456',
       email: 'test@gmail.com',
-      photo: ''
+      photo: '',
+      attendances: [
+        {
+          session: sessions[0]._id,
+          type: 'YES'
+        },
+        {
+          session: sessions[1]._id,
+          type: 'NO'
+        },
+        {
+          session: sessions[2]._id,
+          type: 'DIF'
+        }
+      ]
     }
   ])
-
-  await Session.insertMany([
-    {
-      place: 'LOCAL',
-      date: today,
-      type: 'HIGH'
-    },
-    {
-      place: 'LOCAL',
-      date: today,
-      type: 'HIGH'
-    },
-    {
-      place: 'LOCAL',
-      date: today,
-      type: 'HIGH'
-    }
-  ])
-
 }

@@ -7,7 +7,7 @@ type Player {
   phoneNumber: String
   email: String
   photo: String
-  attendances: [Attendance]
+  attendances(sessionId: ID): [Attendance]
   createdAt: Date
   updatedAt: Date
 }
